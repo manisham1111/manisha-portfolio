@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manisha M - Software Developer Resume">
+
+    <title>Resume | Manisha Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* RESUME PAGE */
+
+        .resume-page {
+            padding-top: 65px;
+            padding-bottom: 100px;
+        }
+
+        .resume-heading {
+            text-align: center;
+            margin: 0 auto 35px;
+        }
+
+        .resume-heading h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            letter-spacing: -0.05em;
+            margin: 10px 0;
+        }
+
+        .resume-heading h1 span {
+            color: var(--teal);
+        }
+
+        .resume-heading p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .resume-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px auto 35px;
+        }
+
+        .resume-button {
+            border: 1px solid rgba(167, 139, 250, .25);
+            border-radius: 12px;
+            padding: 12px 20px;
+            font: inherit;
+            font-size: 12px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text);
+            background: rgba(167, 139, 250, .08);
+            transition: .25s ease;
+        }
+
+        .resume-button.primary {
+            background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+            border-color: transparent;
+            color: white;
+        }
+
+        .resume-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* RESUME SHEET */
+
+        .resume-sheet {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 48px 55px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            border: 1px solid rgba(167, 139, 250, .22);
+            background: #100d18;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, .35);
+            color: #f5f0ff;
+        }
+
+        .resume-top {
+            text-align: center;
+            padding-bottom: 22px;
+            border-bottom: 2px solid #8b5cf6;
+        }
+
+        .resume-top h2 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .resume-role {
+            margin: 7px 0 12px;
+            color: #b69bff;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .resume-contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 7px 14px;
+            font-size: 11px;
+            line-height: 1.8;
+            color: #c4bbd2;
+        }
+
+        .resume-contact a {
+            color: #c4bbd2;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .resume-contact a:hover {
+            color: #b69bff;
+        }
+
+        .resume-summary {
+            padding: 20px 0 5px;
+            font-size: 12px;
+            line-height: 1.85;
+            color: #d0c8dc;
+            text-align: justify;
+        }
+
+        .resume-section {
+            margin-top: 22px;
+        }
+
+        .resume-section h3 {
+            color: #b69bff;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(167, 139, 250, .35);
+            padding-bottom: 8px;
+            margin: 0 0 13px;
+        }
+
+        .resume-section p,
+        .resume-section li {
+            font-size: 11.5px;
+            line-height: 1.75;
+            color: #d0c8dc;
+        }
+
+        .resume-section p {
+            margin: 5px 0;
+        }
+
+        .resume-section strong {
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .resume-section ul {
+            margin: 7px 0 12px;
+            padding-left: 19px;
+        }
+
+        .resume-section li {
+            padding-left: 2px;
+            margin-bottom: 4px;
+        }
+
+        .resume-entry {
+            margin-bottom: 15px;
+            break-inside: avoid;
+        }
+
+        .resume-entry-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 3px;
+        }
+
+        .resume-entry-title h4 {
+            margin: 0;
+            font-size: 12px;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .resume-date {
+            color: #b69bff;
+            font-size: 10.5px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .resume-subtitle {
+            font-size: 11px;
+            font-weight: 700;
+            color: #bdb0d3;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 22px;
+        }
+
+        .skill-item {
+            font-size: 11px;
+            line-height: 1.8;
+            color: #d0c8dc;
+        }
+
+        .skill-item strong {
+            color: #ffffff;
+        }
+
+        .resume-education {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .resume-footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #a89bb9;
+            font-size: 10px;
+        }
+
+        @media (max-width: 650px) {
+            .resume-sheet {
+                padding: 28px 22px;
+            }
+
+            .resume-top h2 {
+                font-size: 26px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resume-entry-title {
+                display: block;
+            }
+
+            .resume-date {
+                display: block;
+                margin-top: 4px;
+            }
+
+            .resume-section p,
+            .resume-section li {
+                font-size: 11px;
+            }
+        }
+
+        /* PRINT / SAVE AS PDF */
+
+        @page {
+            size: A4;
+            margin: 12mm;
+        }
+
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #222222 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .site-header,
+            .footer,
+            .animated-bg,
+            .page-glow,
+            .back-top,
+            .resume-heading,
+            .resume-actions {
+                display: none !important;
+            }
+
+            .resume-page,
+            main,
+            .content-page {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: none !important;
+            }
+
+            .resume-sheet {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                background: #ffffff !important;
+                color: #222222 !important;
+                overflow: visible;
+            }
+
+            .resume-top {
+                border-bottom-color: #6d28d9;
+            }
+
+            .resume-top h2,
+            .resume-section strong,
+            .resume-entry-title h4 {
+                color: #17111f !important;
+            }
+
+            .resume-role,
+            .resume-section h3,
+            .resume-date {
+                color: #6d28d9 !important;
+            }
+
+            .resume-contact,
+            .resume-contact a,
+            .resume-summary,
+            .resume-section p,
+            .resume-section li,
+            .skill-item,
+            .resume-subtitle,
+            .resume-footer {
+                color: #333333 !important;
+            }
+
+            .resume-section h3 {
+                border-bottom-color: #c4b5fd;
+            }
+
+            .resume-section,
+            .resume-entry {
+                break-inside: avoid;
+            }
+
+            a {
+                text-decoration: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="page-glow page-glow-a"></div>
+    <div class="page-glow page-glow-b"></div>
+
+    <div class="animated-bg" aria-hidden="true">
+        <span class="bg-orb o1"></span>
+        <span class="bg-orb o2"></span>
+        <span class="bg-orb o3"></span>
+        <span class="bg-ring"></span>
+        <span class="bg-square"></span>
+        <span class="bg-dot d1"></span>
+        <span class="bg-dot d2"></span>
+        <span class="bg-dot d3"></span>
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <header class="site-header">
+        <nav class="nav shell">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">M</span>
+                <span>Manisha</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="education.html" class="nav-link">Education</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="certifications.html" class="nav-link">Certifications</a>
+                <a href="achievements.html" class="nav-link">Achievements</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- RESUME -->
+
+    <main>
+        <section class="content-page shell resume-page">
+
+            <div class="resume-heading">
+                <p class="eyebrow">CURRICULUM VITAE</p>
+                <h1>My <span>Resume.</span></h1>
+                <p>Education, skills, internships and projects.</p>
+            </div>
+
+            <div class="resume-actions">
+                <button class="resume-button primary" onclick="window.print()">
+                    Download / Save as PDF ↓
+                </button>
+
+                <a class="resume-button" href="projects.html">
+                    View Projects →
+                </a>
+            </div>
+
+            <article class="resume-sheet" id="resumeDocument">
+
+                <!-- CONTACT HEADER -->
+
+                <header class="resume-top">
+                    <h2>MANISHA M</h2>
+                    <p class="resume-role">SOFTWARE DEVELOPER</p>
+
+                    <div class="resume-contact">
+                        <a href="mailto:manisham11112006@gmail.com">
+                            manisham11112006@gmail.com
+                        </a>
+
+                        <span>|</span>
+
+                        <a href="tel:+917538829419">
+                            +91 7538829419
+                        </a>
+
+                        <span>|</span>
+
+                        <a href="https://manisha-portfolio.hatchable.site" target="_blank" rel="noopener noreferrer">
+                            Personal Portfolio ↗
+                        </a>
+
+                        <span>|</span>
+
+                        <a href="https://www.linkedin.com/in/manisha-m-a74a48327?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                            target="_blank" rel="noopener noreferrer">
+                            LinkedIn: Manisha M
+                        </a>
+
+                        <span>|</span>
+
+                        <a href="https://leetcode.com/u/manisha_murugesan/" target="_blank" rel="noopener noreferrer">
+                            LeetCode: manisha_murugesan ↗
+                        </a>
+
+                        <span>|</span>
+
+                        <a href="https://github.com/manisham1111" target="_blank" rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+                    </div>
+                </header>
+
+                <!-- SUMMARY -->
+
+                <div class="resume-summary">
+                    Passionate Computer Science Engineering student seeking
+                    a software development role to apply my programming,
+                    web development, and problem-solving skills while
+                    continuously learning and contributing to real-world
+                    projects.
+                </div>
+
+                <!-- SKILLS -->
+
+                <section class="resume-section">
+                    <h3>Skills</h3>
+
+                    <div class="skills-grid">
+
+                        <div class="skill-item">
+                            <strong>Programming:</strong>
+                            C++, Java, Python
+                        </div>
+
+                        <div class="skill-item">
+                            <strong>Backend:</strong>
+                            Spring Boot, REST APIs, Postman
+                        </div>
+
+                        <div class="skill-item">
+                            <strong>Web Development:</strong>
+                            HTML, CSS, JavaScript, ReactJS
+                        </div>
+
+                        <div class="skill-item">
+                            <strong>Database:</strong>
+                            MySQL, DBMS
+                        </div>
+
+                        <div class="skill-item">
+                            <strong>Core Concepts:</strong>
+                            DSA, OOPs, OS
+                        </div>
+
+                        <div class="skill-item">
+                            <strong>Development Tools:</strong>
+                            VS Code, GitHub, Excel, Power BI
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- INTERNSHIPS -->
+
+                <section class="resume-section">
+                    <h3>Internships</h3>
+
+                    <div class="resume-entry">
+                        <div class="resume-entry-title">
+                            <h4>Future Interns</h4>
+                            <span class="resume-date">March 2026</span>
+                        </div>
+                        <p><strong>Prompt Engineering Intern</strong> — 1 Month</p>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-entry-title">
+                            <h4>Bluestock.in</h4>
+                            <span class="resume-date">April 2026</span>
+                        </div>
+                        <p><strong>Data Analyst Intern</strong> — 1 Month</p>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-entry-title">
+                            <h4>Amypo Technologies Pvt. Ltd.</h4>
+                            <span class="resume-date">May 2026</span>
+                        </div>
+                        <p><strong>Software Developer Intern</strong> — 15 Days</p>
+                    </div>
+                </section>
+
+                <!-- PROJECTS -->
+
+                <section class="resume-section">
+                    <h3>Projects</h3>
+
+                    <div class="resume-entry">
+                        <div class="resume-entry-title">
+                            <h4>Leaf Diseases Detector</h4>
+                        </div>
+                        <p>
+                            <strong>Technologies:</strong>
+                            HTML, CSS, JavaScript, Python, CNN / Deep Learning
+                        </p>
+                        <p>
+                            The Seed Disease Detection project utilizes
+                            Convolutional Neural Networks (CNN) to support
+                            early detection and classification of seed
+                            diseases, helping farmers with crop protection
+                            and management.
+                        </p>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-entry-title">
+                            <h4>Document Sharing System</h4>
+                        </div>
+                        <p>
+                            <strong>Technologies:</strong>
+                            React.js, Java, Spring Boot, MySQL,
+                            Spring Data JPA/Hibernate, REST APIs
+                        </p>
+                        <p>
+                            Developed a secure document management system
+                            with document uploading, organization, sharing,
+                            user authentication, and role-based admin
+                            functionalities.
+                        </p>
+                    </div>
+
+                    <div class="resume-entry">
+                        <div class="resume-entry-title">
+                            <h4>Edge Based Smart Irrigation System</h4>
+                        </div>
+                        <p>
+                            <strong>Technologies:</strong>
+                            ESP32, C++ (Arduino IDE), HTML, CSS,
+                            JavaScript, Node.js
+                        </p>
+                        <p>
+                            Developed a smart irrigation system that monitors
+                            soil moisture and automatically controls a water
+                            pump based on soil conditions. Implemented a web
+                            dashboard for real-time monitoring and
+                            manual/automatic motor control.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- EDUCATION -->
+
+                <section class="resume-section">
+                    <h3>Education</h3>
+
+                    <div class="resume-education">
+                        <div>
+                            <p><strong>Bachelor of Computer Science and Engineering</strong></p>
+                            <p>Sri Krishna College of Engineering and Technology</p>
+                            <p>CGPA: <strong>8.33</strong></p>
+                        </div>
+
+                        <div>
+                            <span class="resume-date">2024 – 2028</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ACHIEVEMENTS -->
+
+                <section class="resume-section">
+                    <h3>Achievements</h3>
+
+                    <p>
+                        <strong>Awards:</strong>
+                        LET CODE TAMILNADU Hackathon Winner (2023–2024);
+                        Student of the Year (2024);
+                        U&amp;ME State-Level Hackathon Participant (Coimbatore).
+                    </p>
+                </section>
+
+                <!-- CERTIFICATIONS -->
+
+                <section class="resume-section">
+                    <h3>Certifications</h3>
+
+                    <ul>
+                        <li>AWS Cloud Practitioner Essentials</li>
+                        <li>Trust and Security with Google Cloud</li>
+                        <li>Data Science for Everyone — Skill India Digital Hub</li>
+                        <li>Data Analytics Job Simulation — Deloitte</li>
+                    </ul>
+                </section>
+
+                <!-- LANGUAGES -->
+
+                <section class="resume-section">
+                    <h3>Languages</h3>
+                    <p>English, Tamil, Telugu (Basics), Kannada (Basics)</p>
+                </section>
+
+                <div class="resume-footer">
+                    MANISHA M · SOFTWARE DEVELOPER
+                </div>
+
+            </article>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer shell">
+        <div>
+            <a class="brand" href="index.html">
+                <span class="brand-mark">M</span>
+                <span>Manisha</span>
+            </a>
+            <p>Software Developer · Web Developer · Coder · Designer</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Manisha. Built with HTML, CSS &amp; JavaScript.
+        </div>
+    </footer>
+
+    <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

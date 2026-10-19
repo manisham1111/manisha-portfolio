@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Manisha — Software Developer, Web Developer, Coder and Designer portfolio.">
+
+  <title>Projects | Manisha Portfolio</title>
+
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Main CSS -->
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <!-- =====================================================
+         PROJECT PAGE ONLY CSS
+    ====================================================== -->
+
+  <style>
+    /* =====================================================
+           PROJECT IMAGE
+        ===================================================== */
+
+    .project-visual {
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    .project-visual img {
+
+      width: 100%;
+      height: 100%;
+
+      min-height: 260px;
+
+      object-fit: cover;
+
+      display: block;
+
+      opacity: 0.78;
+
+      transition:
+        transform 0.6s ease,
+        opacity 0.4s ease,
+        filter 0.4s ease;
+
+    }
+
+
+    .project-card:hover .project-visual img {
+
+      transform: scale(1.07);
+
+      opacity: 0.95;
+
+      filter: brightness(1.08);
+
+    }
+
+
+    .project-visual::after {
+
+      z-index: 2;
+
+    }
+
+
+    .project-visual b,
+    .project-visual small {
+
+      z-index: 5;
+
+    }
+
+
+    .project-image-overlay {
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: 3;
+
+      background:
+        linear-gradient(to bottom,
+          rgba(7, 6, 11, 0.08),
+          rgba(7, 6, 11, 0.68));
+
+      pointer-events: none;
+
+    }
+
+
+    /* =====================================================
+           CLICKABLE PROJECT
+        ===================================================== */
+
+    .project-card-link {
+
+      display: block;
+
+      height: 100%;
+
+      min-width: 0;
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    .project-card-link:hover {
+
+      color: inherit;
+
+    }
+
+
+    .project-card {
+
+      cursor: pointer;
+
+      height: 100%;
+
+    }
+
+
+    .project-view {
+
+      margin-top: 20px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      color: var(--teal);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      transition: gap 0.25s ease;
+
+    }
+
+
+    .project-card:hover .project-view {
+
+      gap: 12px;
+
+    }
+
+
+    /* =====================================================
+           IMPORTANT ALIGNMENT FIX
+        ===================================================== */
+
+    .project-grid {
+
+      align-items: stretch;
+
+    }
+
+
+    /*
+         * Featured project link occupies
+         * the complete first row.
+         */
+
+    .project-card-link.featured-project-link {
+
+      grid-column: span 2;
+
+      min-width: 0;
+
+    }
+
+
+    /*
+         * Featured project keeps
+         * image + content side-by-side.
+         */
+
+    .project-card.featured {
+
+      height: 100%;
+
+      display: grid;
+
+      grid-template-columns:
+        0.9fr 1.1fr;
+
+    }
+
+
+    /*
+         * Normal project cards
+         * have equal height.
+         */
+
+    .project-card-link:not(.featured-project-link) .project-card {
+
+      height: 100%;
+
+    }
+
+
+    /*
+         * Consistent project image height.
+         */
+
+    .project-card-link .project-visual {
+
+      min-height: 260px;
+
+    }
+
+
+    /*
+         * Featured image fills
+         * the complete left side.
+         */
+
+    .project-card-link.featured-project-link .project-visual {
+
+      height: 100%;
+
+    }
+
+
+    /* =====================================================
+           MOBILE
+        ===================================================== */
+
+    @media (max-width: 760px) {
+
+
+      .project-card-link.featured-project-link {
+
+        grid-column: auto;
+
+      }
+
+
+      .project-card.featured {
+
+        display: block;
+
+      }
+
+
+      .project-card-link.featured-project-link .project-visual {
+
+        height: auto;
+
+      }
+
+
+      .project-card-link .project-visual {
+
+        min-height: 220px;
+
+      }
+
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+  <div class="page-glow page-glow-a"></div>
+
+  <div class="page-glow page-glow-b"></div>
+
+
+  <div class="animated-bg" aria-hidden="true">
+
+
+    <span class="bg-orb o1"></span>
+
+    <span class="bg-orb o2"></span>
+
+    <span class="bg-orb o3"></span>
+
+
+    <span class="bg-ring"></span>
+
+    <span class="bg-square"></span>
+
+
+    <span class="bg-dot d1"></span>
+
+    <span class="bg-dot d2"></span>
+
+    <span class="bg-dot d3"></span>
+
+  </div>
+
+
+
+  <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav shell">
+
+
+      <!-- Logo -->
+
+      <a class="brand" href="index.html">
+
+        <span class="brand-mark">
+          M
+        </span>
+
+        <span>
+          Manisha
+        </span>
+
+      </a>
+
+
+
+      <!-- Mobile Menu -->
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+
+      <!-- Navigation -->
+
+      <div class="nav-links" id="navLinks">
+
+
+        <a href="index.html" class="nav-link">
+
+          Home
+
+        </a>
+
+
+        <a href="about.html" class="nav-link">
+
+          About
+
+        </a>
+
+
+        <a href="education.html" class="nav-link">
+
+          Education
+
+        </a>
+
+
+        <a href="skills.html" class="nav-link">
+
+          Skills
+
+        </a>
+
+
+        <a href="experience.html" class="nav-link">
+
+          Experience
+
+        </a>
+
+
+        <a href="projects.html" class="nav-link active">
+
+          Projects
+
+        </a>
+
+
+        <a href="certifications.html" class="nav-link">
+
+          Certifications
+
+        </a>
+
+
+        <a href="achievements.html" class="nav-link">
+
+          Achievements
+
+        </a>
+
+
+        <a href="contact.html" class="nav-link">
+
+          Contact
+
+        </a>
+
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+         MAIN PROJECT SECTION
+    ====================================================== -->
+
+  <main>
+
+    <section class="content-page shell page-section">
+
+
+      <!-- PAGE HEADER -->
+
+      <div class="page-header reveal">
+
+        <div>
+
+          <p class="eyebrow">
+            Projects
+          </p>
+
+
+          <h1>
+
+            Selected work,
+            <span>
+              built to solve problems.
+            </span>
+
+          </h1>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+                 PROJECT GRID
+            ================================================== -->
+
+      <div class="project-grid">
+
+
+
+        <!-- =================================================
+                     PROJECT 01
+                ================================================== -->
+
+        <a href="project-details.html?project=leaf" class="project-card-link featured-project-link">
+
+
+          <article class="project-card featured reveal">
+
+
+            <!-- IMAGE -->
+
+            <div class="project-visual leaf">
+
+
+              <img src="assets\Leaf.png" alt="Leaf Disease Detector project">
+
+
+              <div class="project-image-overlay">
+              </div>
+
+
+              <b>
+                01
+              </b>
+
+
+              <small>
+                ML · IMAGE ANALYSIS
+              </small>
+
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="project-body">
+
+
+              <small>
+                Machine Learning
+              </small>
+
+
+              <h2>
+                Leaf Disease Detector
+              </h2>
+
+
+              <p>
+
+                Python-based project using image
+                processing and machine learning
+                techniques to identify diseases in
+                plant leaves and detect possible
+                infections or abnormalities.
+
+              </p>
+
+
+              <!-- TECHNOLOGIES -->
+
+              <div class="tags">
+
+                <span>
+                  HTML
+                </span>
+
+                <span>
+                  CSS
+                </span>
+
+                <span>
+                  JavaScript
+                </span>
+
+                <span>
+                  Python
+                </span>
+
+                <span>
+                  CNN / Deep Learning
+                </span>
+
+              </div>
+
+
+              <div class="project-view">
+
+                View Project →
+
+              </div>
+
+
+            </div>
+
+
+          </article>
+
+        </a>
+
+
+
+        <!-- =================================================
+                     PROJECT 02
+                ================================================== -->
+
+        <a href="project-details.html?project=wholesale" class="project-card-link">
+
+
+          <article class="project-card reveal">
+
+
+            <!-- IMAGE -->
+
+            <div class="project-visual spring">
+
+
+              <img src="assets\b2b.png" alt="B2B Wholesale Order Processing System">
+
+
+              <div class="project-image-overlay">
+              </div>
+
+
+              <b>
+                02
+              </b>
+
+
+              <small>
+                SPRING · API
+              </small>
+
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="project-body">
+
+
+              <small>
+                Backend System
+              </small>
+
+
+              <h2>
+                B2B Wholesale Order Processing System
+              </h2>
+
+
+              <p>
+
+                Spring Boot system for managing bulk
+                orders efficiently, including order
+                tracking, inventory management and
+                wholesale transaction processing.
+
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  Spring Boot
+                </span>
+
+                <span>
+                  Postman
+                </span>
+
+                <span>
+                  REST API
+                </span>
+
+                <span>
+                  MySQL
+                </span>
+
+              </div>
+
+
+              <div class="project-view">
+
+                View Project →
+
+              </div>
+
+
+            </div>
+
+
+          </article>
+
+        </a>
+
+
+
+        <!-- =================================================
+                     PROJECT 03
+                ================================================== -->
+
+        <a href="project-details.html?project=ewallet" class="project-card-link">
+
+
+          <article class="project-card reveal delay-1">
+
+
+            <!-- IMAGE -->
+
+            <div class="project-visual wallet">
+
+
+              <img src="assets\ewallet 1.jpeg" alt="E-Wallet and Expense Portal">
+
+
+              <div class="project-image-overlay">
+              </div>
+
+
+              <b>
+                03
+              </b>
+
+
+              <small>
+                REACT · STATE
+              </small>
+
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="project-body">
+
+
+              <small>
+                Web Application
+              </small>
+
+
+              <h2>
+                E-Wallet and Expense Portal
+              </h2>
+
+
+              <p>
+
+                ReactJS-based expense tracking and
+                e-wallet application with reusable
+                components and state management for
+                balances, expenses and transaction
+                history.
+
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  ReactJS
+                </span>
+
+                <span>
+                  JavaScript
+                </span>
+
+                <span>
+                  CSS
+                </span>
+
+              </div>
+
+
+              <div class="project-view">
+
+                View Project →
+
+              </div>
+
+
+            </div>
+
+
+          </article>
+
+        </a>
+
+
+
+        <!-- =================================================
+                     PROJECT 04
+                ================================================== -->
+
+        <a href="project-details.html?project=pill" class="project-card-link">
+
+
+          <article class="project-card reveal delay-2">
+
+
+            <!-- IMAGE -->
+
+            <div class="project-visual iot">
+
+
+              <img src="assets\pill box.png" alt="Smart Pill Dispenser">
+
+
+              <div class="project-image-overlay">
+              </div>
+
+
+              <b>
+                04
+              </b>
+
+
+              <small>
+                ESP32 · IOT
+              </small>
+
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="project-body">
+
+
+              <small>
+                IoT System
+              </small>
+
+
+              <h2>
+                Smart Pill Dispenser
+              </h2>
+
+
+              <p>
+
+                IoT-based smart pill dispenser using
+                ESP32 to automate medication reminders
+                and dispensing, with integrated
+                sensors and alerts.
+
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  Arduino IDE
+                </span>
+
+                <span>
+                  C
+                </span>
+
+                <span>
+                  ESP32
+                </span>
+
+              </div>
+
+
+              <div class="project-view">
+
+                View Project →
+
+              </div>
+
+
+            </div>
+
+
+          </article>
+
+        </a>
+
+        <!-- =================================================
+                     PROJECT 05
+                ================================================== -->
+
+        <a href="project-details.html?project=irrigation" class="project-card-link">
+
+          <article class="project-card reveal delay-2">
+
+
+            <!-- IMAGE -->
+
+            <div class="project-visual iot">
+
+              <img src="assets/irrigation.png" alt="Smart Irrigation System">
+
+              <div class="project-image-overlay"></div>
+
+              <b>
+                04
+              </b>
+
+              <small>
+                ESP32 · IOT
+              </small>
+
+            </div>
+
+
+
+            <!-- CONTENT -->
+
+            <div class="project-body">
+
+              <small>
+                IoT System
+              </small>
+
+
+              <h2>
+                Smart Irrigation System
+              </h2>
+
+
+              <p>
+                An IoT-based smart irrigation system using ESP32
+                and a soil moisture sensor to monitor soil
+                moisture and automatically control a water pump
+                for efficient plant watering.
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  ESP32
+                </span>
+
+                <span>
+                  Arduino IDE
+                </span>
+
+                <span>
+                  Soil Moisture Sensor
+                </span>
+
+                <span>
+                  Relay Module
+                </span>
+
+                <span>
+                  Water Pump
+                </span>
+
+                <span>
+                  IoT
+                </span>
+
+              </div>
+
+
+              <div class="project-view">
+
+                View Project →
+
+              </div>
+
+
+            </div>
+
+
+          </article>
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+  <footer class="footer shell">
+
+
+    <div>
+
+      <a class="brand" href="index.html">
+
+        <span class="brand-mark">
+          M
+        </span>
+
+        <span>
+          Manisha
+        </span>
+
+      </a>
+
+
+      <p>
+        Software Developer · Web Developer · Coder · Designer
+      </p>
+
+    </div>
+
+
+
+    <div class="footer-links">
+
+      <a href="projects.html">
+        Projects
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a href="resume.html">
+        Resume
+      </a>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+      © 2026 Manisha.
+      Built with HTML, CSS & JavaScript.
+
+    </div>
+
+
+  </footer>
+
+
+
+  <!-- Back to top -->
+
+  <button class="back-top" id="backTop" aria-label="Back to top">
+
+    ↑
+
+  </button>
+
+
+
+  <!-- Existing JS -->
+
+  <script src="app.js"></script>
+
+
+</body>
+
+</html>

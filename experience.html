@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manisha's software development, frontend development, prompt engineering and data analytics internship experience.">
+  <title>Experience | Manisha Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Experience timeline - matches the Education page */
+
+    .experience-timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-left: 32px;
+      max-width: 1000px;
+    }
+
+    .experience-timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(
+        to bottom,
+        #a78bfa,
+        rgba(167, 139, 250, 0.15)
+      );
+    }
+
+    .experience-item {
+      position: relative;
+      width: 100%;
+      padding: 38px 32px;
+      border-radius: 26px;
+      background: linear-gradient(
+        145deg,
+        rgba(25, 18, 38, 0.88),
+        rgba(9, 7, 14, 0.96)
+      );
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .experience-item::before {
+      content: "";
+      position: absolute;
+      left: -38px;
+      top: 25px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #a78bfa;
+      border: 3px solid #171020;
+      box-shadow: 0 0 0 5px rgba(167, 139, 250, 0.08);
+    }
+
+    .experience-item:hover {
+      border-color: rgba(167, 139, 250, 0.48);
+      transform: translateY(-3px);
+    }
+
+    .experience-item small {
+      display: block;
+      margin-bottom: 17px;
+      color: #c4b5fd;
+      font-family: "DM Mono", monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    .experience-item h2 {
+      margin: 0 0 8px;
+      color: var(--text, #f7f2ff);
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .experience-item h3 {
+      margin: 0 0 14px;
+      color: #c4b5fd;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .experience-item p {
+      margin: 0 0 18px;
+      color: var(--muted, #b0a5bd);
+      font-size: 0.94rem;
+      line-height: 1.9;
+    }
+
+    .experience-item .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .experience-item .tags span {
+      display: inline-block;
+    }
+
+    @media (max-width: 650px) {
+      .experience-timeline {
+        padding-left: 25px;
+        gap: 16px;
+      }
+
+      .experience-timeline::before {
+        left: 4px;
+      }
+
+      .experience-item {
+        padding: 26px 20px;
+        border-radius: 22px;
+      }
+
+      .experience-item::before {
+        left: -31px;
+      }
+
+      .experience-item h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .experience-item {
+        transition: none;
+      }
+
+      .experience-item:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="page-glow page-glow-a"></div>
+  <div class="page-glow page-glow-b"></div>
+
+  <div class="animated-bg" aria-hidden="true">
+    <span class="bg-orb o1"></span>
+    <span class="bg-orb o2"></span>
+    <span class="bg-orb o3"></span>
+    <span class="bg-ring"></span>
+    <span class="bg-square"></span>
+    <span class="bg-dot d1"></span>
+    <span class="bg-dot d2"></span>
+    <span class="bg-dot d3"></span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav shell">
+
+      <a class="brand" href="index.html">
+        <span class="brand-mark">M</span>
+        <span>Manisha</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-page="index.html">Home</a>
+        <a href="about.html" class="nav-link" data-page="about.html">About</a>
+        <a href="education.html" class="nav-link" data-page="education.html">Education</a>
+        <a href="skills.html" class="nav-link" data-page="skills.html">Skills</a>
+        <a href="experience.html" class="nav-link" data-page="experience.html">Experience</a>
+        <a href="projects.html" class="nav-link" data-page="projects.html">Projects</a>
+        <a href="certifications.html" class="nav-link" data-page="certifications.html">Certifications</a>
+        <a href="achievements.html" class="nav-link" data-page="achievements.html">Achievements</a>
+        <a href="contact.html" class="nav-link" data-page="contact.html">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="content-page shell page-section">
+
+      <div class="page-header reveal">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h1>Professional <span>journey.</span></h1>
+        </div>
+      </div>
+
+      <div class="experience-timeline">
+
+        <!-- Pinnacle Labs -->
+        <article class="experience-item reveal">
+          <small>June 2025 · 1 Month</small>
+
+          <h2>Pinnacle Labs</h2>
+          <h3>Frontend Development Intern</h3>
+
+          <p>
+            Completed a one-month internship focused on frontend
+            development, practicing web interface creation and
+            building practical projects.
+          </p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </article>
+
+        <!-- CodeAlpha -->
+        <article class="experience-item reveal delay-1">
+          <small>July 2025 · 1 Month</small>
+
+          <h2>CodeAlpha</h2>
+          <h3>Frontend Development Intern</h3>
+
+          <p>
+            Completed a one-month frontend development internship
+            to strengthen web development fundamentals and practice
+            building interactive user interfaces.
+          </p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Frontend Development</span>
+          </div>
+        </article>
+
+        <!-- Future Interns -->
+        <article class="experience-item reveal">
+          <small>March 2026 · 1 Month</small>
+
+          <h2>Future Interns</h2>
+          <h3>Prompt Engineering Intern</h3>
+
+          <p>
+            Completed a one-month internship focused on prompt
+            engineering and exploring AI-assisted workflows.
+          </p>
+
+          <div class="tags">
+            <span>Prompt Engineering</span>
+            <span>Artificial Intelligence</span>
+            <span>AI Tools</span>
+          </div>
+        </article>
+
+        <!-- Bluestock -->
+        <article class="experience-item reveal delay-1">
+          <small>April 2026 · 1 Month</small>
+
+          <h2>Bluestock.in</h2>
+          <h3>Data Analyst Intern</h3>
+
+          <p>
+            Gained experience in data analytics workflows, data
+            processing, SQLite database organization, ETL processes,
+            and Power BI dashboard development.
+          </p>
+
+          <div class="tags">
+            <span>Data Analytics</span>
+            <span>ETL</span>
+            <span>SQLite</span>
+            <span>Power BI</span>
+          </div>
+        </article>
+
+        <!-- Amypo Technologies -->
+        <article class="experience-item reveal">
+          <small>May 2026 · 15 Days</small>
+
+          <h2>Amypo Technologies Pvt. Ltd.</h2>
+          <h3>Software Developer Intern</h3>
+
+          <p>
+            Completed a 15-day software development internship,
+            gaining exposure to software development practices
+            and technical problem-solving.
+          </p>
+
+          <div class="tags">
+            <span>Software Development</span>
+            <span>Problem Solving</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer shell">
+
+    <div>
+      <a class="brand" href="index.html">
+        <span class="brand-mark">M</span>
+        <span>Manisha</span>
+      </a>
+
+      <p>Software Developer · Web Developer · Coder · Designer</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume</a>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Manisha. Built with HTML, CSS &amp; JavaScript.
+    </div>
+
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

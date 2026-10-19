@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Manisha Portfolio Project Details">
+
+    <title>Project Details | Manisha Portfolio</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        /* =====================================================
+           PROJECT DETAILS PAGE
+        ===================================================== */
+
+        .project-details-page {
+
+            padding-top: 75px;
+
+            padding-bottom: 110px;
+
+        }
+
+
+        /* =====================================================
+           BACK BUTTON
+        ===================================================== */
+
+        .project-back {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 35px;
+
+            color: #b0a5bd;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .project-back:hover {
+
+            color: var(--teal);
+
+            transform: translateX(-4px);
+
+        }
+
+
+        /* =====================================================
+           PROJECT HEADER
+        ===================================================== */
+
+        .project-detail-header {
+
+            max-width: 1000px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+
+        }
+
+
+        .project-detail-header .eyebrow {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .project-detail-header h1 {
+
+            margin: 0 auto 20px;
+
+            font-size: clamp(42px, 7vw, 78px);
+
+            line-height: 1.02;
+
+            letter-spacing: -0.065em;
+
+        }
+
+
+        .project-detail-header h1 span {
+
+            color: var(--teal);
+
+        }
+
+
+        .project-detail-header p {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.85;
+
+        }
+
+        /* =====================================================
+   PROJECT IMAGE - NATURAL SIZE / NO CROP
+===================================================== */
+
+        .project-detail-image {
+            width: fit-content;
+            max-width: 100%;
+
+            height: auto;
+
+            margin: 0 auto 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+
+            border: 1px solid rgba(167, 139, 250, 0.20);
+
+            background: #09070d;
+
+            box-shadow:
+                0 30px 90px rgba(0, 0, 0, 0.40);
+        }
+
+
+        .project-detail-image img {
+            display: block;
+
+            width: auto;
+            height: auto;
+
+            max-width: 100%;
+            max-height: none;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            background: transparent;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 760px) {
+
+            .project-detail-image {
+
+                width: 100%;
+
+                border-radius: 20px;
+
+            }
+
+            .project-detail-image img {
+
+                width: 100%;
+
+                height: auto;
+
+                object-fit: contain;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           TECHNOLOGY TAGS
+        ===================================================== */
+
+        .project-tech-list {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin: -25px auto 45px;
+
+            position: relative;
+
+            z-index: 5;
+
+        }
+
+
+        .project-tech-list span {
+
+            padding: 8px 13px;
+
+            border-radius: 999px;
+
+            border: 1px solid rgba(167, 139, 250, 0.20);
+
+            background:
+                rgba(15, 10, 22, 0.95);
+
+            color: #d1c5dc;
+
+            font-family:
+                "DM Mono",
+                monospace;
+
+            font-size: 10px;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =====================================================
+           DETAILS GRID
+        ===================================================== */
+
+        .project-detail-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+
+            max-width: 1080px;
+
+            margin: 0 auto;
+
+        }
+
+
+        /* =====================================================
+           DETAIL CARD
+        ===================================================== */
+
+        .detail-card {
+
+            padding: 30px;
+
+            border-radius: 22px;
+
+            border: 1px solid rgba(167, 139, 250, 0.15);
+
+            background:
+                linear-gradient(180deg,
+                    rgba(25, 18, 38, 0.82),
+                    rgba(10, 8, 15, 0.80));
+
+        }
+
+
+        .detail-card.full {
+
+            grid-column: 1 / -1;
+
+        }
+
+
+        .detail-card h2 {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin: 0 0 14px;
+
+            font-size: 18px;
+
+            color: var(--text);
+
+        }
+
+
+        .detail-card h2::before {
+
+            content: "";
+
+            width: 18px;
+
+            height: 2px;
+
+            flex-shrink: 0;
+
+            background: var(--teal);
+
+            box-shadow:
+                0 0 12px rgba(167, 139, 250, 0.40);
+
+        }
+
+
+        .detail-card p {
+
+            margin: 0;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.85;
+
+        }
+
+
+        .detail-card ul {
+
+            margin: 0;
+
+            padding-left: 20px;
+
+            color: var(--muted);
+
+        }
+
+
+        .detail-card li {
+
+            margin-bottom: 9px;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           FEATURE LIST
+        ===================================================== */
+
+        .feature-list {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 10px;
+
+            margin-top: 15px;
+
+        }
+
+
+        .feature-item {
+
+            padding: 13px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(167, 139, 250, 0.10);
+
+            background:
+                rgba(167, 139, 250, 0.035);
+
+            color: #bcb0c8;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .feature-item::before {
+
+            content: "✦";
+
+            color: var(--teal);
+
+            margin-right: 8px;
+
+        }
+
+
+        /* =====================================================
+           BOTTOM BUTTONS
+        ===================================================== */
+
+        .project-detail-bottom {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-top: 42px;
+
+        }
+
+
+        .project-action {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 13px 18px;
+
+            border-radius: 13px;
+
+            border: 1px solid rgba(167, 139, 250, 0.20);
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+
+        }
+
+
+        .project-action.primary {
+
+            background:
+                linear-gradient(135deg,
+                    #7c3aed,
+                    #8b5cf6);
+
+            border-color: transparent;
+
+            color: white;
+
+        }
+
+
+        .project-action.secondary {
+
+            background:
+                rgba(255, 255, 255, 0.03);
+
+            color: #d5cadf;
+
+        }
+
+
+        .project-action:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 760px) {
+
+
+            .project-details-page {
+
+                padding-top: 55px;
+
+                padding-bottom: 80px;
+
+            }
+
+
+            .project-detail-header h1 {
+
+                font-size: 42px;
+
+            }
+
+
+            .project-detail-image {
+
+                height: 360px;
+
+                border-radius: 20px;
+
+                margin-bottom: 35px;
+
+            }
+
+
+            .project-detail-image img {
+
+                object-fit: contain;
+
+                object-position: center center;
+
+            }
+
+
+            .project-detail-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .detail-card.full {
+
+                grid-column: auto;
+
+            }
+
+
+            .feature-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+
+            .project-detail-image {
+
+                height: 300px;
+
+                border-radius: 16px;
+
+            }
+
+
+            .project-tech-list {
+
+                margin-top: -15px;
+
+            }
+
+
+            .detail-card {
+
+                padding: 22px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ===================================================== -->
+
+    <div class="page-glow page-glow-a"></div>
+
+    <div class="page-glow page-glow-b"></div>
+
+
+    <div class="animated-bg" aria-hidden="true">
+
+        <span class="bg-orb o1"></span>
+
+        <span class="bg-orb o2"></span>
+
+        <span class="bg-orb o3"></span>
+
+        <span class="bg-ring"></span>
+
+        <span class="bg-square"></span>
+
+        <span class="bg-dot d1"></span>
+
+        <span class="bg-dot d2"></span>
+
+        <span class="bg-dot d3"></span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="site-header">
+
+        <nav class="nav shell">
+
+
+            <!-- BRAND -->
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark">
+                    M
+                </span>
+
+                <span>
+                    Manisha
+                </span>
+
+            </a>
+
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </button>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div class="nav-links" id="navLinks">
+
+
+                <a href="index.html" class="nav-link">
+
+                    Home
+
+                </a>
+
+
+                <a href="about.html" class="nav-link">
+
+                    About
+
+                </a>
+
+
+                <a href="education.html" class="nav-link">
+
+                    Education
+
+                </a>
+
+
+                <a href="skills.html" class="nav-link">
+
+                    Skills
+
+                </a>
+
+
+                <a href="experience.html" class="nav-link">
+
+                    Experience
+
+                </a>
+
+
+                <a href="projects.html" class="nav-link active">
+
+                    Projects
+
+                </a>
+
+
+                <a href="certifications.html" class="nav-link">
+
+                    Certifications
+
+                </a>
+
+
+                <a href="achievements.html" class="nav-link">
+
+                    Achievements
+
+                </a>
+
+
+                <a href="contact.html" class="nav-link">
+
+                    Contact
+
+                </a>
+
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <main>
+
+        <section class="content-page shell project-details-page">
+
+
+            <!-- BACK -->
+
+            <a href="projects.html" class="project-back">
+
+                ← Back to Projects
+
+            </a>
+
+
+
+            <!-- =================================================
+                 PROJECT HEADER
+            ================================================== -->
+
+            <div class="project-detail-header">
+
+
+                <p class="eyebrow" id="projectCategory">
+
+                    PROJECT
+
+                </p>
+
+
+                <h1 id="projectTitle">
+
+                    Project
+
+                </h1>
+
+
+                <p id="projectIntro">
+
+                    Loading project...
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT IMAGE
+            ================================================== -->
+
+            <div class="project-detail-image">
+
+                <img id="projectImage" src="" alt="Project image">
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TECHNOLOGIES
+            ================================================== -->
+
+            <div class="project-tech-list" id="projectTech">
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DETAILS
+            ================================================== -->
+
+            <div class="project-detail-grid">
+
+
+                <!-- OVERVIEW -->
+
+                <article class="detail-card full">
+
+                    <h2>
+                        Project Overview
+                    </h2>
+
+                    <p id="projectOverview"></p>
+
+                </article>
+
+
+
+                <!-- PROBLEM -->
+
+                <article class="detail-card">
+
+                    <h2>
+                        Problem Statement
+                    </h2>
+
+                    <p id="projectProblem"></p>
+
+                </article>
+
+
+
+                <!-- OBJECTIVE -->
+
+                <article class="detail-card">
+
+                    <h2>
+                        Objective
+                    </h2>
+
+                    <p id="projectObjective"></p>
+
+                </article>
+
+
+
+                <!-- FEATURES -->
+
+                <article class="detail-card full">
+
+                    <h2>
+                        Key Features
+                    </h2>
+
+                    <div class="feature-list" id="projectFeatures">
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- WORKFLOW -->
+
+                <article class="detail-card">
+
+                    <h2>
+                        How It Works
+                    </h2>
+
+                    <ul id="projectWorkflow"></ul>
+
+                </article>
+
+
+
+                <!-- CONTRIBUTION -->
+
+                <article class="detail-card">
+
+                    <h2>
+                        My Contribution
+                    </h2>
+
+                    <p id="projectContribution"></p>
+
+                </article>
+
+
+
+                <!-- OUTCOME -->
+
+                <article class="detail-card full">
+
+                    <h2>
+                        Outcome
+                    </h2>
+
+                    <p id="projectOutcome"></p>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOTTOM BUTTONS
+            ================================================== -->
+
+            <div class="project-detail-bottom">
+
+
+                <a href="projects.html" class="project-action secondary">
+
+                    ← All Projects
+
+                </a>
+
+
+                <a href="contact.html" class="project-action primary">
+
+                    Discuss This Project →
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="footer shell">
+
+
+        <div>
+
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-mark">
+                    M
+                </span>
+
+                <span>
+                    Manisha
+                </span>
+
+            </a>
+
+
+            <p>
+                Software Developer · Web Developer · Coder · Designer
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+
+            <a href="resume.html">
+                Resume
+            </a>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            © 2026 Manisha.
+            Built with HTML, CSS & JavaScript.
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+
+    <button class="back-top" id="backTop" aria-label="Back to top">
+
+        ↑
+
+    </button>
+
+
+
+    <!-- EXISTING JS -->
+
+    <script src="app.js"></script>
+
+
+
+    <!-- =====================================================
+         PROJECT DATA + DYNAMIC CONTENT
+    ===================================================== -->
+
+    <script>
+
+        const projects = {
+
+
+            /* =================================================
+               01 - LEAF DISEASE DETECTOR
+            ================================================= */
+
+            leaf: {
+
+                category:
+                    "Machine Learning · Image Analysis",
+
+                title:
+                    "Leaf Disease Detector",
+
+                image:
+                    "assets/Leaf.png",
+
+                intro:
+                    "An intelligent image-based disease detection project designed to identify possible diseases in plant leaves using image processing and Convolutional Neural Networks.",
+
+                technologies: [
+
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Python",
+                    "CNN",
+                    "Deep Learning",
+                    "Image Processing"
+
+                ],
+
+                overview:
+                    "The Leaf Disease Detector is a machine learning based project focused on detecting and classifying diseases from leaf images. The system uses image processing techniques and a Convolutional Neural Network to analyze visual patterns and identify possible disease categories. The project demonstrates how computer vision and deep learning can be applied to agricultural problem solving.",
+
+                problem:
+                    "Plant diseases can affect crop health and agricultural productivity. Identifying diseases manually from leaf appearance can be time-consuming and may require expert knowledge. A digital image-based solution can assist with faster preliminary identification.",
+
+                objective:
+                    "The objective is to develop an image-based system capable of analyzing plant leaf images and identifying possible disease conditions using machine learning techniques.",
+
+                features: [
+
+                    "Leaf image input",
+
+                    "Image preprocessing",
+
+                    "Image feature analysis",
+
+                    "CNN based classification",
+
+                    "Disease identification",
+
+                    "Result display",
+
+                    "User-friendly interface"
+
+                ],
+
+                workflow: [
+
+                    "User provides a leaf image.",
+
+                    "The image is prepared for analysis.",
+
+                    "The trained CNN model processes the image.",
+
+                    "Visual patterns are analyzed.",
+
+                    "The system predicts the corresponding disease category.",
+
+                    "The result is presented to the user."
+
+                ],
+
+                contribution:
+                    "Worked on the frontend interface and project implementation using HTML, CSS, JavaScript and Python based machine learning components. The project involved connecting the user-facing interface with the image analysis workflow.",
+
+                outcome:
+                    "The project demonstrates the application of CNN and image processing techniques for automated plant disease detection and provides a foundation for technology-assisted agricultural monitoring."
+
+            },
+
+
+
+            /* =================================================
+               02 - B2B WHOLESALE
+            ================================================= */
+
+            wholesale: {
+
+                category:
+                    "Backend System · Spring Boot · REST API",
+
+                title:
+                    "B2B Wholesale Order Processing System",
+
+                image:
+                    "assets/b2b.png",
+
+                intro:
+                    "A backend system designed to manage B2B wholesale orders, inventory and customer-related data through structured REST APIs.",
+
+                technologies: [
+
+                    "Java",
+                    "Spring Boot",
+                    "REST API",
+                    "Swagger UI",
+                    "MySQL",
+                    "JPA / Hibernate"
+
+                ],
+
+                overview:
+                    "The B2B Wholesale Order Processing System is a backend application designed to streamline wholesale order processing. The system provides structured APIs for managing orders, inventory and customer data while supporting an organized flow between different business operations.",
+
+                problem:
+                    "Wholesale businesses handle large numbers of products, customers and orders. Managing these operations manually or through disconnected processes can make tracking orders, inventory and customer information difficult.",
+
+                objective:
+                    "The objective is to build a centralized backend system that can manage wholesale orders efficiently and provide APIs for reliable communication between the application components.",
+
+                features: [
+
+                    "Order management",
+
+                    "Customer data management",
+
+                    "Inventory management",
+
+                    "REST API endpoints",
+
+                    "Database integration",
+
+                    "API testing using Postman",
+
+                    "Structured backend architecture"
+
+                ],
+
+                workflow: [
+
+                    "Client sends a request to the REST API.",
+
+                    "Spring Boot receives and processes the request.",
+
+                    "Business logic validates the operation.",
+
+                    "Data is stored or retrieved from the database.",
+
+                    "The API returns the appropriate response.",
+
+                    "Postman can be used to test the endpoints."
+
+                ],
+
+                contribution:
+                    "Worked with Spring Boot to design backend functionality, REST API endpoints and database-related operations. Used Postman for API testing and validation.",
+
+                outcome:
+                    "The project demonstrates practical backend development using Java and Spring Boot and provides experience in REST API design, database integration and API testing."
+
+            },
+
+
+
+            /* =================================================
+               03 - E-WALLET
+            ================================================= */
+
+            ewallet: {
+
+                category:
+                    "Web Application · ReactJS",
+
+                title:
+                    "E-Wallet and Expense Portal",
+
+                image:
+                    "assets/ewallet 1.jpeg",
+
+                intro:
+                    "A ReactJS-based web application for managing wallet balances, tracking expenses and viewing transaction history.",
+
+                technologies: [
+
+                    "ReactJS",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "Component Based UI",
+                    "State Management"
+
+                ],
+
+                overview:
+                    "The E-Wallet and Expense Portal is a web application designed to provide users with a simple way to manage wallet information and monitor personal expenses. The application uses ReactJS components to create a structured and interactive user experience.",
+
+                problem:
+                    "Users often need a simple way to keep track of their available balance, expenses and transaction history. Managing these details manually can make it difficult to understand spending patterns.",
+
+                objective:
+                    "The objective is to develop an interactive web application that allows users to manage balances, record expenses and review transaction history through a clean interface.",
+
+                features: [
+
+                    "Wallet balance management",
+
+                    "Expense tracking",
+
+                    "Transaction history",
+
+                    "Reusable React components",
+
+                    "Interactive interface",
+
+                    "State management",
+
+                    "Responsive UI"
+
+                ],
+
+                workflow: [
+
+                    "User opens the wallet dashboard.",
+
+                    "Current balance and transaction information are displayed.",
+
+                    "User records an expense or transaction.",
+
+                    "Application state is updated.",
+
+                    "The updated balance is displayed.",
+
+                    "Transaction history can be reviewed."
+
+                ],
+
+                contribution:
+                    "Developed the frontend using ReactJS and worked with reusable components, UI structure and state management for balances, expenses and transaction information.",
+
+                outcome:
+                    "The project provided practical experience in ReactJS development, component reuse, state management and creating an interactive financial tracking interface."
+
+            },
+
+
+
+            /* =================================================
+               04 - SMART PILL DISPENSER
+            ================================================= */
+
+            pill: {
+
+                category:
+                    "IoT · ESP32 · Embedded System",
+
+                title:
+                    "Smart Pill Dispenser",
+
+                image:
+                    "assets/pill box.png",
+
+                intro:
+                    "An IoT-based smart medication system designed to automate medicine reminders and dispensing using ESP32 and connected hardware components.",
+
+                technologies: [
+
+                    "ESP32",
+                    "C Programming",
+                    "Arduino IDE",
+                    "Sensors",
+                    "IoT",
+                    "Embedded Systems"
+
+                ],
+
+                overview:
+                    "The Smart Pill Dispenser is an IoT-based project developed to support timely medication management. The system uses ESP32 and connected hardware components to automate reminders and dispensing operations.",
+
+                problem:
+                    "People may forget to take medication at the correct time, especially when multiple doses are required. Manual medication management can result in missed or delayed doses.",
+
+                objective:
+                    "The objective is to create an automated system that provides medication reminders and supports controlled medicine dispensing at the required time.",
+
+                features: [
+
+                    "Medication reminders",
+
+                    "Automated dispensing",
+
+                    "ESP32 controller",
+
+                    "Sensor integration",
+
+                    "Alert mechanism",
+
+                    "Embedded control logic",
+
+                    "Timed operation"
+
+                ],
+
+                workflow: [
+
+                    "ESP32 initializes the connected components.",
+
+                    "The system tracks the configured medication schedule.",
+
+                    "At the required time, an alert is triggered.",
+
+                    "The dispensing mechanism is activated.",
+
+                    "The required medicine is made available.",
+
+                    "The system continues monitoring the next scheduled dose."
+
+                ],
+
+                contribution:
+                    "Worked with ESP32, Arduino IDE and C programming to implement the embedded control logic and integrate sensors and alerts for the smart dispensing workflow.",
+
+                outcome:
+                    "The project demonstrates practical IoT and embedded-system development while addressing medication reminder and automated dispensing requirements."
+
+            },
+
+            /* =================================================
+                05 - SMART IRRIGATION SYSTEM
+            ================================================= */
+
+            irrigation: {
+
+                category:
+                    "IoT · ESP32 · Smart Agriculture",
+
+                title:
+                    "Smart Irrigation System",
+
+                image:
+                    "assets/irrigation.png",
+
+                intro:
+                    "An IoT-based smart irrigation system that monitors soil moisture and automatically controls water supply to plants using ESP32.",
+
+                technologies: [
+
+                    "ESP32",
+                    "Arduino IDE",
+                    "C / C++",
+                    "Soil Moisture Sensor",
+                    "Relay Module",
+                    "Water Pump",
+                    "IoT"
+
+                ],
+
+                overview:
+                    "The Smart Irrigation System is an IoT-based project developed to automate plant watering based on soil moisture conditions. The system uses an ESP32 microcontroller and a soil moisture sensor to monitor the moisture level of the soil. Based on the detected moisture condition, the system controls a water pump through a relay module.",
+
+                problem:
+                    "Manual watering can result in overwatering or underwatering plants. Continuous monitoring of soil moisture is also difficult when plants need regular care. The system addresses this problem by automatically monitoring soil moisture and controlling irrigation.",
+
+                objective:
+                    "The objective is to develop an automated irrigation system that monitors soil moisture and supplies water to plants only when the soil requires it, helping reduce unnecessary water usage.",
+
+                features: [
+
+                    "Real-time soil moisture monitoring",
+
+                    "Automatic water pump control",
+
+                    "ESP32-based control system",
+
+                    "Soil moisture sensor integration",
+
+                    "Relay-based pump switching",
+
+                    "Automatic irrigation",
+
+                    "Reduced water wastage",
+
+                    "IoT-based monitoring"
+
+                ],
+
+                workflow: [
+
+                    "The soil moisture sensor measures the moisture level of the soil.",
+
+                    "The sensor sends the moisture reading to the ESP32.",
+
+                    "The ESP32 evaluates the soil moisture condition.",
+
+                    "If the soil is dry, the relay activates the water pump.",
+
+                    "Water is supplied to the plant.",
+
+                    "When sufficient moisture is detected, the ESP32 turns the pump off."
+
+                ],
+
+                contribution:
+                    "Worked on ESP32 programming, soil moisture sensor integration, relay-based motor control and Arduino IDE implementation. The system was designed to automatically operate the water pump according to the detected soil moisture condition.",
+
+                outcome:
+                    "The Smart Irrigation System demonstrates how IoT and embedded systems can be used to automate agricultural irrigation, reduce manual effort and provide efficient water management for plants."
+
+            },
+
+        };
+
+
+
+        /* =====================================================
+           READ PROJECT FROM URL
+        ===================================================== */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const projectKey =
+            params.get("project") || "leaf";
+
+
+        const project =
+            projects[projectKey];
+
+
+
+        /* =====================================================
+           IF PROJECT DOES NOT EXIST
+        ===================================================== */
+
+        if (!project) {
+
+            window.location.href =
+                "projects.html";
+
+        }
+
+
+
+        /* =====================================================
+           DISPLAY PROJECT
+        ===================================================== */
+
+        if (project) {
+
+
+            /* PAGE TITLE */
+
+            document.title =
+                `${project.title} | Manisha Portfolio`;
+
+
+
+            /* CATEGORY */
+
+            document.getElementById(
+                "projectCategory"
+            ).textContent =
+                project.category;
+
+
+
+            /* TITLE */
+
+            document.getElementById(
+                "projectTitle"
+            ).textContent =
+                project.title;
+
+
+
+            /* INTRO */
+
+            document.getElementById(
+                "projectIntro"
+            ).textContent =
+                project.intro;
+
+
+
+            /* =================================================
+               IMAGE
+            ================================================= */
+
+            const projectImage =
+                document.getElementById(
+                    "projectImage"
+                );
+
+
+            projectImage.src =
+                project.image;
+
+
+            projectImage.alt =
+                project.title;
+
+
+
+            /*
+             * If image fails,
+             * log exact path in console.
+             */
+
+            projectImage.onerror =
+                function () {
+
+                    console.error(
+                        "Image not found:",
+                        project.image
+                    );
+
+                };
+
+
+
+            /* =================================================
+               TECHNOLOGIES
+            ================================================= */
+
+            const techContainer =
+                document.getElementById(
+                    "projectTech"
+                );
+
+
+            project.technologies.forEach(
+                function (tech) {
+
+                    const tag =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    tag.textContent =
+                        tech;
+
+
+                    techContainer.appendChild(
+                        tag
+                    );
+
+                }
+            );
+
+
+
+            /* =================================================
+               OVERVIEW
+            ================================================= */
+
+            document.getElementById(
+                "projectOverview"
+            ).textContent =
+                project.overview;
+
+
+
+            /* =================================================
+               PROBLEM
+            ================================================= */
+
+            document.getElementById(
+                "projectProblem"
+            ).textContent =
+                project.problem;
+
+
+
+            /* =================================================
+               OBJECTIVE
+            ================================================= */
+
+            document.getElementById(
+                "projectObjective"
+            ).textContent =
+                project.objective;
+
+
+
+            /* =================================================
+               FEATURES
+            ================================================= */
+
+            const featuresContainer =
+                document.getElementById(
+                    "projectFeatures"
+                );
+
+
+            project.features.forEach(
+                function (feature) {
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    item.className =
+                        "feature-item";
+
+
+                    item.textContent =
+                        feature;
+
+
+                    featuresContainer.appendChild(
+                        item
+                    );
+
+                }
+            );
+
+
+
+            /* =================================================
+               WORKFLOW
+            ================================================= */
+
+            const workflowContainer =
+                document.getElementById(
+                    "projectWorkflow"
+                );
+
+
+            project.workflow.forEach(
+                function (step) {
+
+                    const li =
+                        document.createElement(
+                            "li"
+                        );
+
+
+                    li.textContent =
+                        step;
+
+
+                    workflowContainer.appendChild(
+                        li
+                    );
+
+                }
+            );
+
+
+
+            /* =================================================
+               CONTRIBUTION
+            ================================================= */
+
+            document.getElementById(
+                "projectContribution"
+            ).textContent =
+                project.contribution;
+
+
+
+            /* =================================================
+               OUTCOME
+            ================================================= */
+
+            document.getElementById(
+                "projectOutcome"
+            ).textContent =
+                project.outcome;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
